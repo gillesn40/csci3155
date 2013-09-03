@@ -23,7 +23,7 @@ TA: Jedidiah (Jed) McClurg
         3. Start up VirtualBox and "install" the ISO image
         4. You should now have a Linux "desktop" inside a window on your computer!
 5. Markdown (Basic Overview)
-    1. Install the tools: `sudo apt-get pandoc latex-beamer`
+    1. Install the tools: `sudo apt-get install pandoc latex-beamer`
     2. Now you can compile a markdown document to a PDF by doing something like:
     `pandoc -f markdown -V theme:PaloAlto --write beamer -o myfile.pdf myfile.md`
 6. SSH Keys
