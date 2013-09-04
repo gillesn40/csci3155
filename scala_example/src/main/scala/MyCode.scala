@@ -2,7 +2,7 @@ object MyCode {
   def sumList(a : List[Int]) : Int = {
     a match {
       case (List()) => 0
-      case (a::more) => (a + sumList(more))
+      case (x::more) => (x + sumList(more))
     }
   }
 
