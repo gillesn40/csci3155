@@ -1,3 +1,0 @@
-object Euler3 {
-
-}

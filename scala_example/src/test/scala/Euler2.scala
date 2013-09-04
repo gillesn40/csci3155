@@ -1,3 +1,0 @@
-object Euler2 {
-
-}
