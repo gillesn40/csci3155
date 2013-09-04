@@ -21,4 +21,28 @@ class MySpec extends FlatSpec {
 
     assert(MyCode.sumList2(myList) === 6)
   }
+
+  "Fib (Euler2)" should "sum a few numbers correctly" in {
+    assert(Euler2.fib(21) === 10)
+  }
+
+  it should "give the correct final answer" in {
+    assert(Euler2.answer === 4613732)
+  }
+
+  "Factors (Euler3)" should "compute the largest prime factor of 10" in {
+    assert(Euler3.factorize(10) === 5)
+  }
+
+  it should "give the correct final answer" in {
+    assert(Euler3.answer === 6857)
+  }
+
+  "MyMap" should "properly use an addition map" in {
+    assert(MyMap.map(List(1,2,3,4,5), x=>x+1) === List(2,3,4,5,6))
+  }
+
+  it should "properly use a multiplication map" in {
+    assert(MyMap.map(List(1,2,3,4,5), x=>x*2) === List(2,4,6,8,10))
+  }
 }
