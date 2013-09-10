@@ -45,4 +45,9 @@ class MySpec extends FlatSpec {
   it should "properly use a multiplication map" in {
     assert(MyMap.map(List(1,2,3,4,5), x=>x*2) === List(2,4,6,8,10))
   }
+
+  "Matching" should "properly order a tree" in {
+    assert(Matching.inorder2(Node(Node(Leaf(123),124,Leaf(125)),126,Leaf(127)))
+ === List(123,124,125,126,127))
+  }
 }
