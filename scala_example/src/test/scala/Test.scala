@@ -1,5 +1,6 @@
 import org.scalatest.FlatSpec
 import scala.collection.mutable.Stack
+import scala.util.parsing.input._
 
 class MySpec extends FlatSpec {
   "My Code" should "recursively sum a list of integers properly" in {
@@ -49,5 +50,16 @@ class MySpec extends FlatSpec {
   "Matching" should "properly order a tree" in {
     assert(Matching.inorder2(Node(Node(Leaf(123),124,Leaf(125)),126,Leaf(127)))
  === List(123,124,125,126,127))
+  }
+
+  "Simple Parser Combinators" should "properly compute sums/products" in {
+    assert(SimpleParser.parse("0") === 0.0f)
+    assert(SimpleParser.parse("1+1+1+1+1+1+1+1+1") === 9.0f)
+    assert(SimpleParser.parse("1+2+3+4+5") === 15.0f)
+    assert(SimpleParser.parse("123*0.0") === 0.0f)
+    assert(SimpleParser.parse("1*2*3*4*5") === 120.0f)
+    assert(SimpleParser.parse("1*2+2*3+3*4+4*5") === 40.0f)
+    assert(SimpleParser.parse("1*2+2*(3+3)*4+4*5") === 70.0f)
+    assert(SimpleParser.parse("1+2+((3*(2+2)))") === 15.0f)
   }
 }
